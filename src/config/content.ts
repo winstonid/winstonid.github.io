@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "Your Portfolio",
-  title: "Someone's Portfolio",
-  description: "A showcase of my work and thoughts",
+  name: "My Portfolio",
+  title: "Winston's Portfolio",
+  description: "A preview of my work and projects",
   social: {
-    github: "https://github.com/tomcomtang/astro-multiplepage-portfolio",
-    twitter: "https://x.com/astrodotbuild",
-    email: "mailto:364786053@qq.com",
+    github: "https://github.com/winstonid/winstonid.github.io",
+    twitter: "https://x.com/",
+    email: "mailto:winstonid@gmail.com",
   },
 };
 
