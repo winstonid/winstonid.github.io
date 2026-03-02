@@ -10,9 +10,9 @@ export const siteConfig = {
 };
 
 export const homeContent = {
-  title: "Hello, I'm Your Name",
+  title: "Hello, I'm Winston Millamena Jr.",
   description:
-    "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
+    "The ability to translate complex enterprise solutions into tangible business value has defined my 25-year career in EAM and IWMS implementations. ",
   buttons: {
     about: {
       text: "View About",
@@ -31,12 +31,12 @@ export const homeContent = {
 
 export const aboutContent = {
   meta: {
-    title: "About - Your Portfolio",
+    title: "About - Winston's Millamena Jr Portfolio",
     description: "Learn more about my background, skills, and experience",
   },
   title: "About Me",
   description:
-    "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
+    "Results-driven Project Manager with 20+ years of experience leading large-scale EAM, IWMS, and CMMS implementations across healthcare, hospitality, utilities, and government sectors. Proven ability to manage multi-million-dollar budgets, cross-functional teams (30+ members), and complex integrations (SAP, IoT, Cloud). Adept at risk mitigation, stakeholder alignment, and Agile/Waterfall delivery. PMP trained with expertise in Maximo, TRIRIGA, and ERP systems.",
   skills: [
     "Next.js",
     "React",
@@ -55,24 +55,24 @@ export const aboutContent = {
     title: "Experience",
     items: [
       {
-        period: "2022 - Present",
-        position: "Senior Frontend Developer",
-        company: "Tencent Cloud",
+        period: "2024 - Present",
+        position: "Maximo Principal | Project Manager - Maximo MAS",
+        company: "Naviam",
         description:
-          "Leading frontend development for EdgeOne platform and templates.",
+          "Led three concurrent projects, including Hong Kong Land and Hong Kong Business Aviation Center, ensuring timely delivery and adherence to budget within 6 months| Streamlined project deliverables, enhancing team efficiency by 30% within 3 months through the introduction of agile methodologies and regular status updates. Efficiently allocate resources, both human and technical, to ensure the successful execution of projects. This involves overseeing project portfolios, ensuring adherence to timelines, budgets, and quality standards. | Liaise with client to ensure timely communications, regular project status & proactive issue handling",
       },
       {
-        period: "2020 - 2022",
-        position: "Frontend Developer",
-        company: "Tencent Cloud",
+        period: "2021 - 2024",
+        position: "Head of Service Delivery",
+        company: "Maximo Business Solutions, Inc.",
         description:
-          "Developed and maintained multiple web applications and tools.",
+          "Directed / Supervised entire Delivery Team of 30+ resources (PMO team, Technical & Functional teams, infrastructure teams, Software Support & Maintenance team) | Client Portfolio: Managed 12+ Maximo/SAP projects, including Petron, Bank of Philippines, and Light Rail Manila.| Providing the Delivery organisation with guidance for any project- related issues/concerns that will be encountered and Manage critical situations that will arise from the projects |Providing PMO governance, assurances and compliance for delivered services",
       },
       {
-        period: "2018 - 2020",
-        position: "Junior Developer",
-        company: "Tencent Cloud",
-        description: "Worked on various client projects and internal tools.",
+        period: "2020 - 2021",
+        position: "EAM Solution Architect (Maximo) | Business Dev & Delivery ",
+        company: "IBM",
+        description: "Establishes architecture standards for custom and Commercial Off- the-shelf Systems and applications to support the Asset Management ecosystem including EAM, APM, GIS, BIM, ERP, Mobility, sensor devices, etc.| Provide technical leadership to architects and technical leads working on different environments, projects, accounts | Advise on the selection of key enterprise tools (e.g. data source, IOT, sensors, scheduling, graphic design, analytics, mobility); | Support expansion activities such as preparing estimates and defining technical solutions to proposals | Provide industry mentorship, strategies, and our standard methodologies;",
       },
     ],
   },
@@ -82,7 +82,7 @@ export const aboutContent = {
       "Feel free to reach out if you want to collaborate or just say hi! You can find us on social media or drop us an",
     email: {
       text: "email",
-      href: "mailto:364786053@qq.com",
+      href: "mailto:winstonid@gmail.com",
     },
   },
 };
