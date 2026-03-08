@@ -4,6 +4,10 @@ import edgeone from '@edgeone/astro';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://winstonid.github.io',
+  base: '/',  // '/' for username.github.io sites
+  // ... keep your existing integrations/trailingSlash/etc.
+  
   /*
   Currently it is deployed on Tencent Cloud EdgeOne, on an Asia-based Pages platform (the author is also based in Asia). 
   If users require, they can switch to Vercel or another Pages platform themselves.
