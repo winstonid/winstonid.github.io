@@ -97,7 +97,7 @@ export const projectsContent = {
     "Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.",
   projects: [
     {
-      title: "Project One",
+      title: "MOS Project Implementation Upgrade Project ",
       description:
         "A brief description of your first project. Explain what it does and what technologies you used.",
       image: "/assets/images/projects/project1.jpg",
