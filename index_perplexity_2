@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maximo & TRIRIGA Consulting | Implementation & Upgrades | Votco IT Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Votco IT Consulting provides IBM Maximo and TRIRIGA implementation, upgrade, integration and consulting services for asset-intensive and real-estate-focused organizations." />
+  <meta name="keywords" content="Votco IT Consulting, Maximo consulting, TRIRIGA consulting, Maximo implementation, TRIRIGA implementation, Maximo upgrade, TRIRIGA upgrade, Maximo Application Suite, IBM TRIRIGA, asset management consulting" />
+  <link rel="canonical" href="https://www.votcoit.com/" />
+  <style>
+    :root {
+      --primary: #003366;
+      --secondary: #0b9ed9;
+      --bg: #f5f7fa;
+      --text: #222;
+      --muted: #666;
+      --accent: #ffb400;
+      --max-width: 1100px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--secondary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(135deg, var(--primary), #001a33);
+      color: #fff;
+      padding: 24px 16px 40px;
+    }
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .nav-links a {
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    .nav-links a:hover { opacity: 1; }
+
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+    .hero h1 span {
+      color: var(--secondary);
+    }
+    .hero p {
+      font-size: 15px;
+      color: #dde6f2;
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+    .hero-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .hero-tag {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 6px 12px;
+      font-size: 12px;
+      background: rgba(0,0,0,0.1);
+    }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      background: var(--secondary);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    }
+    .btn-primary:hover { background: #07aef1; }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.6);
+      cursor: pointer;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.06); }
+    .hero-meta {
+      font-size: 12px;
+      color: #c4d0e8;
+      margin-top: 4px;
+    }
+    .hero-card {
+      background: rgba(0,0,0,0.15);
+      border-radius: 12px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #eaf0ff;
+      font-size: 13px;
+    }
+    .hero-card h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .hero-card ul {
+      list-style: none;
+    }
+    .hero-card li::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 16px 40px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+    .section-intro {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .pill {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e1ecf7;
+      color: var(--primary);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px 16px 18px;
+      box-shadow: 0 4px 12px rgba(15,23,42,0.08);
+      border: 1px solid #e2e8f0;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .card ul {
+      list-style: none;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .card ul li {
+      margin-bottom: 4px;
+    }
+    .card ul li::before {
+      content: "▹";
+      margin-right: 6px;
+      color: var(--secondary);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: #e5f8ff;
+      color: #055f7a;
+      font-size: 11px;
+      padding: 3px 8px;
+      margin-bottom: 6px;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 22px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(15,23,42,0.06);
+    }
+    thead {
+      background: #eef2f7;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    th {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #4a5568;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .contact {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 4px 16px rgba(15,23,42,0.1);
+      border: 1px solid #e2e8f0;
+    }
+    .contact label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: var(--muted);
+    }
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 9px 10px;
+      font-size: 13px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      margin-bottom: 10px;
+      resize: vertical;
+      font-family: inherit;
+    }
+    .contact small {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .contact-meta {
+      font-size: 13px;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+    .contact-meta a {
+      color: var(--secondary);
+      font-weight: 500;
+    }
+
+    footer {
+      border-top: 1px solid #dde3ee;
+      padding: 14px 16px 20px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      background: #f1f5f9;
+    }
+
+    /* Mobile and tablet responsiveness */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 26px;
+      }
+      header {
+        padding-bottom: 28px;
+      }
+      .columns {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        font-size: 13px;
+      }
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      body {
+        font-size: 15px;
+      }
+      .card {
+        padding: 14px 14px 16px;
+      }
+      table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Votco IT Consulting</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#maximo">Maximo</a>
+      <a href="#tririga">TRIRIGA</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>Maximo &amp; <span>TRIRIGA</span> Implementation, Upgrade &amp; Consulting</h1>
+      <p>
+        Votco IT Consulting helps asset‑intensive and real‑estate‑focused organizations deliver reliable IBM Maximo and TRIRIGA solutions through expert implementation, seamless upgrades, and practical advisory services.
+      </p>
+      <div class="hero-highlight">
+        <span class="hero-tag">Maximo Application Suite (MAS)</span>
+        <span class="hero-tag">TRIRIGA / Maximo Real Estate &amp; Facilities</span>
+        <span class="hero-tag">On‑prem, Cloud &amp; Hybrid</span>
+      </div>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Book a discovery call
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+          View services
+        </button>
+      </div>
+      <div class="hero-meta">
+        Typical engagements: implementation projects, version upgrades, integrations, health checks, and ongoing Maximo &amp; TRIRIGA support.
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Where Votco IT Consulting helps you succeed</h3>
+      <ul>
+        <li>End‑to‑end Maximo &amp; TRIRIGA implementations</li>
+        <li>Upgrades, migrations &amp; cloud adoption</li>
+        <li>Process design, configuration &amp; reporting</li>
+        <li>Integration with ERP, finance, GIS &amp; IoT</li>
+        <li>Training, change management &amp; support</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Services overview -->
+  <section id="services">
+    <h2>Maximo &amp; TRIRIGA services</h2>
+    <p class="section-intro">
+      Votco IT Consulting delivers focused IBM Maximo and IBM TRIRIGA services, from strategy and implementation through upgrades, integration and ongoing optimization for your operational and real estate portfolios.
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">Implementation &amp; rollout</span>
+      <span class="pill">Health check &amp; optimization</span>
+      <span class="pill">Upgrade &amp; migration</span>
+      <span class="pill">Integration &amp; data</span>
+      <span class="pill">Training &amp; adoption</span>
+      <span class="pill">Managed support</span>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Implementation &amp; rollout</h3>
+        <p>
+          Design and deploy Maximo and TRIRIGA solutions that align with your business processes, data structures, and compliance requirements.
+        </p>
+        <ul>
+          <li>Requirements &amp; solution design workshops</li>
+          <li>Configuration, workflows &amp; automation</li>
+          <li>Dashboards, KPIs &amp; reporting setup</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Upgrades &amp; modernization</h3>
+        <p>
+          Upgrade to current Maximo and TRIRIGA / Maximo Real Estate &amp; Facilities releases while protecting data and configurations with a structured approach.[web:9]
+        </p>
+        <ul>
+          <li>Version assessments &amp; upgrade strategy</li>
+          <li>Application &amp; database upgrade execution</li>
+          <li>Regression testing &amp; go‑live support</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Integration &amp; data services</h3>
+        <p>
+          Connect Maximo and TRIRIGA with ERP, finance, HR, GIS, BMS and IoT platforms, and improve data quality for more reliable asset and facility decisions.[web:4][web:12]
+        </p>
+        <ul>
+          <li>System architecture &amp; interface design</li>
+          <li>Data mapping, cleansing &amp; migration</li>
+          <li>Real‑time &amp; batch integrations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maximo focus -->
+  <section id="maximo">
+    <h2>IBM Maximo Application Suite consulting</h2>
+    <p class="section-intro">
+      IBM Maximo Application Suite centralizes asset and facilities operations with AI‑assisted maintenance, work management and analytics, helping organizations improve reliability and reduce lifecycle costs.[web:10]
+      Votco IT Consulting helps you deploy and optimize Maximo for real‑world operations.
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <span class="badge">Maximo implementation</span>
+        <h3>Asset &amp; work management</h3>
+        <p>
+          Implement Maximo modules for asset lifecycle, work orders, preventive maintenance, inventory and procurement to support daily maintenance and reliability processes.[web:4][web:10]
+        </p>
+        <ul>
+          <li>Functional &amp; technical design</li>
+          <li>Workflows, escalation &amp; SLAs</li>
+          <li>Role‑based security &amp; data model</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge">Maximo optimization</span>
+        <h3>Analytics, mobile &amp; IoT</h3>
+        <p>
+          Extend Maximo with mobile inspections, condition monitoring and predictive maintenance to improve uptime, compliance and field productivity.[web:4][web:10]
+        </p>
+        <ul>
+          <li>Mobile app rollout &amp; user enablement</li>
+          <li>IoT sensor and telemetry integration</li>
+          <li>Reporting &amp; reliability analytics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIRIGA focus -->
+  <section id="tririga">
+    <h2>IBM TRIRIGA &amp; Maximo Real Estate &amp; Facilities</h2>
+    <p class="section-intro">
+      IBM TRIRIGA provides integrated workplace management across real estate, facilities, capital projects and energy, with capabilities now incorporated into Maximo Real Estate &amp; Facilities.[web:6][web:8]
+      Votco IT Consulting guides your implementation, transition and ongoing optimization.
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <span class="badge">TRIRIGA implementation</span>
+        <h3>Real estate &amp; workplace</h3>
+        <p>
+          Configure TRIRIGA to support lease administration, space planning, facilities operations and service management on a unified, audit‑ready platform.[web:5][web:8]
+        </p>
+        <ul>
+          <li>Real estate &amp; lease management setup</li>
+          <li>Space, occupancy &amp; move management</li>
+          <li>Maintenance &amp; service request workflows</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge">Transition &amp; upgrades</span>
+        <h3>TRIRIGA to MAS transitions</h3>
+        <p>
+          Plan and execute the move from standalone TRIRIGA to Maximo Real Estate &amp; Facilities, aligning data, processes and integrations with minimal disruption.[web:6][web:9]
+        </p>
+        <ul>
+          <li>Current‑state assessment &amp; roadmap</li>
+          <li>Data migration &amp; configuration alignment</li>
+          <li>Change management &amp; user training</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison table -->
+  <section>
+    <h2>Maximo vs. TRIRIGA focus areas</h2>
+    <p class="section-intro">
+      Many organizations use Maximo and TRIRIGA together or transition between them, so understanding their strengths helps you design the right architecture and integration strategy.[web:6][web:8][web:12]
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>IBM Maximo Application Suite</th>
+          <th>IBM TRIRIGA / Maximo Real Estate &amp; Facilities</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Primary focus</td>
+          <td>Enterprise asset management, maintenance, and reliability.[web:10]</td>
+          <td>Real estate, workplace and facilities lifecycle management.[web:8]</td>
+        </tr>
+        <tr>
+          <td>Key strengths</td>
+          <td>Work management, asset registry, inventory, IoT and condition monitoring.[web:4][web:10][web:12]</td>
+          <td>Lease accounting, space planning, capital projects, energy and sustainability.[web:6][web:8]</td>
+        </tr>
+        <tr>
+          <td>Typical users</td>
+          <td>Maintenance, reliability, operations and asset management teams.[web:4][web:10]</td>
+          <td>Corporate real estate, facilities, finance and workplace experience teams.[web:6][web:8]</td>
+        </tr>
+        <tr>
+          <td>Common use with both</td>
+          <td colspan="2">
+            Unified asset and facility data model, cross‑system workflows and integrated reporting across real estate, maintenance and operations.[web:6][web:12]
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Approach & engagement -->
+  <section id="approach">
+    <h2>How Votco IT Consulting works with you</h2>
+    <p class="section-intro">
+      Our approach combines structured project delivery with flexible advisory support, so you can move quickly on Maximo and TRIRIGA initiatives while maintaining control of risk, budget and quality.[web:4][web:5][web:13]
+    </p>
+
+    <div class="columns">
+      <div>
+        <div class="card">
+          <h3>Engagement steps</h3>
+          <ul>
+            <li>Discover: clarify goals, scope and stakeholders</li>
+            <li>Design: architecture, data model and process blueprints</li>
+            <li>Build: configuration, integrations and test cycles</li>
+            <li>Deploy: cutover, training and hypercare support</li>
+            <li>Optimize: reporting, tuning and continuous improvements</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Engagement options</h3>
+          <ul>
+            <li>Fixed‑scope implementation packages</li>
+            <li>Time‑and‑materials consulting support</li>
+            <li>Health check &amp; roadmap assessments</li>
+            <li>Ongoing admin &amp; managed support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Votco IT Consulting</h2>
+    <p class="section-intro">
+      Share a bit about your current Maximo or TRIRIGA environment and goals, and we will suggest practical next steps and options for an introductory session.
+    </p>
+
+    <div class="contact">
+      <form action="mailto:winston@votcoit.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" placeholder="Organization name" />
+
+        <label for="email">Work email</label>
+        <input id="email" name="email" type="email" placeholder="you@company.com" required />
+
+        <label for="system">Current system &amp; version</label>
+        <input id="system" name="system" type="text" placeholder="e.g. Maximo 7.6, MAS 8.x, TRIRIGA 11.x" />
+
+        <label for="message">What would you like help with?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Briefly describe your project, challenges or timelines."></textarea>
+
+        <button class="btn-primary" type="submit">Send enquiry</button>
+        <small>
+          You can also email us directly at <strong>winston@votcoit.com</strong>.
+        </small>
+      </form>
+
+      <div class="contact-meta">
+        Or call / WhatsApp Votco IT Consulting at
+        <a href="tel:+85292790289">+852 9279 0289</a>
+        to discuss your Maximo or TRIRIGA needs.[web:16][web:19][web:22]
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Votco IT Consulting · <a href="https://www.votcoit.com/">www.votcoit.com</a> · Maximo &amp; TRIRIGA implementation, upgrade and advisory services.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
