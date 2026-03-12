@@ -123,6 +123,7 @@
       transform: scale(1.05);
     }
 
+    /* css for back to top */
     #back-to-top {
       position: fixed;
       bottom: 30px;
@@ -761,6 +762,10 @@
 
     </div>
   </section>
+
+  <!-- NEW: Back to Top Button -->
+<button id="back-to-top" title="Back to Top">↑</button>
+
 </main>
 
 <footer>
@@ -769,11 +774,11 @@
   <a href="index.html#contact">Contact Winston</a>
 </footer>
 
-<!-- NEW: Back to Top Button -->
-<button id="back-to-top" title="Back to Top">↑</button>
+
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
   // Smooth scroll to top
   document.getElementById('back-to-top').addEventListener('click', function(e) {
     e.preventDefault();
