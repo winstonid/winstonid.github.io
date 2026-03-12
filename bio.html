@@ -766,7 +766,7 @@
 </footer>
 
 
-
+<!--
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -789,6 +789,56 @@
     }
   });
 </script>
+-->
+<script>
+  // Year update
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Back to top functionality - FIXED
+  function initBackToTop() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) {
+      console.log('Back to top button not found');
+      return;
+    }
+
+    // Smooth scroll to top
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Show/hide button on scroll
+    let ticking = false;
+    function updateButton() {
+      const scrollY = window.scrollY || window.pageYOffset;
+      if (scrollY > 400) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateButton);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // Initialize when DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBackToTop);
+  } else {
+    initBackToTop();
+  }
+</script>
+
 
 </body>
 </html>
