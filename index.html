@@ -17,6 +17,46 @@
       --accent: #ffb400;
       --max-width: 1100px;
     }
+
+
+    /* Add this at the START of your <style> section, after :root */
+    html {
+      scroll-behavior: smooth;
+    }
+  /* FIXED: Back to top CSS */
+    #back-to-top {
+      position: fixed !important;
+      bottom: 30px;
+      right: 30px;
+      background: var(--secondary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(11, 158, 217, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 10000;  /* Higher z-index */
+    }
+
+    #back-to-top:hover {
+      background: #07aef1;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(11, 158, 217, 0.5);
+    }
+
+    #back-to-top.show {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -188,6 +228,7 @@
       margin-bottom: 10px;
       color: var(--primary);
     }
+
     .section-intro {
       font-size: 14px;
       color: var(--muted);
@@ -735,13 +776,63 @@
 
 </main>
 
+
+ <!-- NEW: Back to Top Button -->
+<button id="back-to-top" title="Back to Top">↑</button>
+
 <footer>
-  © <span id="year"></span> Votco IT Consulting · <a href="https://www.votcoit.com/">www.votcoit.com</a> · MAXIMO &amp; TRIRIGA implementation, upgrade and advisory services.
+   © <span id="year"></span> Votco IT Consulting · <a href="https://www.votcoit.com/">www.votcoit.com</a> · MAXIMO &amp; TRIRIGA implementation, upgrade and advisory services.
 </footer>
 
 <script>
+  // Year update
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Back to top functionality - FIXED
+  function initBackToTop() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) {
+      console.log('Back to top button not found');
+      return;
+    }
+
+    // Smooth scroll to top
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Show/hide button on scroll
+    let ticking = false;
+    function updateButton() {
+      const scrollY = window.scrollY || window.pageYOffset;
+      if (scrollY > 400) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateButton);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // Initialize when DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBackToTop);
+  } else {
+    initBackToTop();
+  }
 </script>
+
 
 </body>
 </html>
