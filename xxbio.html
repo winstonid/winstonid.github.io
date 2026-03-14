@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Bio & Projects | VotCo IT Consulting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Winston - MAXIMO and TRIRIGA specialist with 10+ years experience. View past projects and expertise." />
+  <meta name="description" content="Winston - MAXIMO and TRIRIGA specialist with 25+ years experience. View past projects and expertise." />
   <meta name="keywords" content="MAXIMO consultant, TRIRIGA consultant, Winston Votco, IBM MAXIMO projects, TRIRIGA implementation" />
   <link rel="canonical" href="https://www.votcoit.com/bio.html" />
   <style>
@@ -57,7 +57,6 @@
       transform: translateY(0) !important;
     }
 
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -65,6 +64,7 @@
       background: var(--bg);
       line-height: 1.6;
     }
+
     a { color: var(--secondary); text-decoration: none; }
     a:hover { text-decoration: underline; }
     
@@ -73,6 +73,7 @@
       color: #fff;
       padding: 24px 16px 40px;
     }
+
     .nav {
       max-width: var(--max-width);
       margin: 0 auto 16px;
@@ -82,34 +83,49 @@
       gap: 10px;
       flex-wrap: wrap;
     }
+
     .logo-wrap {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+    
+    .logo-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      object-fit: contain;
+      /* Remove border completely */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    /*
     .logo-circle {
       width: 64px;
       height: 64px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #ffffff;
-    }
+    }    */
+
     .logo-text {
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.03em;
       white-space: nowrap;
     }
+
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       font-size: 14px;
     }
+
     .nav-links a {
       font-weight: 500;
       opacity: 0.9;
     }
+
     .nav-links a:hover { opacity: 1; }
 
     .project-logos {
@@ -160,7 +176,58 @@
       transform: scale(1.05);
     }
 
+    /* NEW: Photo beside section-intro */
+    .about-with-photo {
+      margin-bottom: 40px;
     }
+
+    .photo-and-bio {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 30px;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+
+    .photo-container {
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 12px 24px rgba(15,23,42,0.15);
+      border: 3px solid white;
+      background: white;
+    }
+
+    .bio-content {
+      flex: 1;
+    }
+
+    .bio-content h2 {
+      margin-bottom: 16px;
+    }
+
+    /* Mobile: Stack photo above text */
+    @media (max-width: 768px) {
+      .photo-and-bio {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+      }
+      
+      .profile-photo {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+      }
+    }
+
+
+
     .section-intro {
       font-size: 16px;
       color: var(--muted);
@@ -198,7 +265,6 @@
       color: var(--muted);
       margin-top: 4px;
     }
-
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -249,7 +315,6 @@
       padding: 4px 10px;
       margin-bottom: 12px;
     }
-
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -303,7 +368,7 @@
       <a href="index.html#maximo">MAXIMO</a>
       <a href="index.html#tririga">TRIRIGA</a>
       <a href="index.html#approach">Approach</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#contact">Contact</a> 
       <a href="bio.html">Bio &amp; Project Engagements</a>  <!-- ADD THIS -->
     </div>
   </div>
@@ -312,11 +377,25 @@
 <main>
   <a href="index.html" class="back-link">← Back to Services</a>
 
-  <section>
+   <!-- <section> -->
+
+  <section class="about-with-photo">
+  <div class="photo-and-bio">
+    <!-- NEW: Photo on left -->
+    <div class="photo-container">
+      <img src="winston-photo.jpg" alt="Winston P Millamena Junior" class="profile-photo" />
+    </div>
+    
+    <!-- Your existing content on right -->
+    <div class="bio-content">
+
+
     <h2>About Winston P Millamena Junior.</h2>
     <p class="section-intro">
       Results-driven Project Manager with 25+ years of experience leading large-scale EAM, IWMS, and CMMS implementations across healthcare, hospitality, utilities, and government sectors. Proven ability to manage multi-million-dollar budgets, cross-functional teams (30+ members), and complex integrations (SAP, IoT, Cloud). Adept at risk mitigation, stakeholder alignment, and Agile/Waterfall delivery. PMP trained with expertise in Maximo, TRIRIGA, and ERP systems. 
     </p>
+
+    <!-- Stats -->
     <div class="hero-bio">
       <div class="bio-stats">
         <div class="stat-card">
@@ -337,6 +416,8 @@
         </div>
       </div>
     </div>
+  <!--  
+  </div>-->
   </section>
 
   <section id="projects">
@@ -505,7 +586,7 @@
           <!-- When you have the real logo, replace edc-logo.png -->
           <div class="project-logo">
             <img src="images/edc-logo.png" alt="Energy Development Corporation logo" />
-            <span>Energy Development Corporation (EDC) Philippines</span>
+            <span>Energy Development Corporation (EDC)</span>
           </div>
         </div>
       </div>
@@ -765,31 +846,6 @@
   <a href="index.html#contact">Contact Winston</a>
 </footer>
 
-
-<!--
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Smooth scroll to top
-  document.getElementById('back-to-top').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  // Show/hide button on scroll
-  window.addEventListener('scroll', function() {
-    const button = document.getElementById('back-to-top');
-    if (window.scrollY > 400) {
-      button.classList.add('show');
-    } else {
-      button.classList.remove('show');
-    }
-  });
-</script>
--->
 <script>
   // Year update
   document.getElementById('year').textContent = new Date().getFullYear();
